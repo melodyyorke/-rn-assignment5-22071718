@@ -27,7 +27,7 @@ export default function HomeScreen(){
             <Text style={styles.mainText}> Eric Atsu</Text>
           </View>
 
-          <View>
+          <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
             <Image source={search}/>
             <Image style={styles.search}></Image>
              </View>
@@ -36,25 +36,22 @@ export default function HomeScreen(){
             <Image source={card} style={{top:15}}></Image>
 
             <View style={styles.cardView}>
-              {/* send,recieve,loan,topUp */}
-              <View style={styles.sendView}>
+              {/* send,recieve,loan,topUp,View Text */}
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={send} style={styles.sendImage}></Image>
-                <Text style={{right:10,top:10}}>Send</Text>
               </View>
-              <View style={styles.recieveView}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={recieve} style={styles.recieveImage}></Image>
-                <Text style={{right:20,top:10}}>Recieve</Text>
               </View>
-              <View style={styles.loanView}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={loan} style={styles.loanImage}></Image>
-                <Text style={{right:30,top:5}}>Loan</Text>
+        
               </View>
-              <View style={styles.topUpView}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={topUp} style={styles.topUpImage}></Image>
-                <Text style={{right:40,top:5}}>Top Up</Text>
+               
               </View>
-               </View>
-            
+             </View>
             <View style={{margin:5}}>
             <Text style={{fontWeight:600,top:70}}>Transaction</Text>
             <Text style={{color:'blue',left:250,top:50}}>Sell All</Text>
@@ -62,19 +59,23 @@ export default function HomeScreen(){
 
             <View style={styles.cardView2}>
               {/* apple,spotify,moneyTransfer,grocery*/}
-              <View style={styles.appleView}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={apple} style={styles.appleImage}></Image>
               </View>
-              <View style={styles.spotifyView}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={spotify} style={styles.spotifyImage}></Image>
               </View>
-              <View style={styles.moneyTransferView}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={moneyTransfer} style={styles.moneyTransferImage}></Image>
               </View>
-              <View style={styles.groceryView}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={grocery} style={styles.groceryImage}></Image>
-              </View>
+                </View>
+
+          
             </View>
+      
+          
           </View>
         
     )
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-   paddingTop:10,
+   paddingTop:20,
    paddingLeft:10,
     marginLeft:5,
     marginRight:5
@@ -108,24 +109,21 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-around',
       top:45,
-      backgroundColor: '#fff',
       alignItems:'flex',
-      display:'flex'
+      display:'flex',
   
      },
      cardView2: {
       flexDirection: 'column',
       justifyContent: 'space-around',
-      top:60,
-      backgroundColor: '#fff',
+      top:40,
       alignItems:'flex',
       display:'flex',
-      width:200,
-      height:200
+      width:250,
+      height:250
     
-
-    
-    }
+     },
+     
       
 
   } 
