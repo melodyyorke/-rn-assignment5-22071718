@@ -1,4 +1,4 @@
-import {View,Text,Image,StyleSheet,ScrollView} from 'react-native';
+import {View,Text,Image,StyleSheet,ScrollView, Button,} from 'react-native';
 const logoImg = require('./assets/Card.png');
 import profile from'./assets/profile.png';
 import search from'./assets/search.png';
@@ -11,10 +11,14 @@ import apple from './assets/apple.png';
 import spotify from './assets/spotify.png';
 import moneyTransfer from './assets/moneyTransfer.png';
 import grocery from './assets/grocery.png';
+import home from './assets/home.png';
+import myCards from './assets/myCards.png';
+import statictics from './assets/statictics.png';
+import settings from './assets/settings.png';
 
 export default function HomeScreen(){
     return (
-      <View style={styles. container}>
+      <ScrollView style={styles. container}>
         <View style={styles.header}>
 
            {/* profile,View Text,search */} 
@@ -38,8 +42,10 @@ export default function HomeScreen(){
             <View style={styles.cardView}>
               {/* send,recieve,loan,topUp,View Text */}
               <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
-                <Image source={send} style={styles.sendImage}></Image>
-              </View>
+                <Image source={send} style={styles.sendImage}></Image> 
+               </View>
+                
+               
               <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={recieve} style={styles.recieveImage}></Image>
               </View>
@@ -49,8 +55,8 @@ export default function HomeScreen(){
               </View>
               <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={topUp} style={styles.topUpImage}></Image>
-               
-              </View>
+               </View>
+        
              </View>
             <View style={{margin:5}}>
             <Text style={{fontWeight:600,top:70}}>Transaction</Text>
@@ -59,7 +65,8 @@ export default function HomeScreen(){
 
             <View style={styles.cardView2}>
               {/* apple,spotify,moneyTransfer,grocery*/}
-              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}
+              >
                 <Image source={apple} style={styles.appleImage}></Image>
               </View>
               <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
@@ -71,14 +78,34 @@ export default function HomeScreen(){
               <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={grocery} style={styles.groceryImage}></Image>
                 </View>
-
-          
             </View>
-      
-          
-          </View>
+
+            <View style= {styles.cardView3}>
+              {/* home,myCard,statictics,settings*/}
+              <View>
+                <Image source={home} style={styles.homeImage}></Image>
+              </View>
+              <View>
+                <Image source={myCards} style={styles.myCardsImage}></Image>
+              </View>
+              <View>
+                <Image source={statictics} style={styles.staticticsImage}></Image>
+              </View>
+              <View>
+                <Image source={settings} style={styles.settingsImage}></Image>
+              </View>
+               </View>
+
+               <View>
+                < View style={styles.header2}>
+                <Text style={styles.headerText}>Settings</Text>
+                </View>
+               </View>
+
+ </ScrollView>
+
         
-    )
+    );
 }
 
 const styles = StyleSheet.create({
@@ -99,6 +126,18 @@ const styles = StyleSheet.create({
       alignItems:'center',
       display:'flex'
       },
+      headerText: {
+        fontSize: 20,
+        fontWeight:600,
+        marginLeft:5,
+        marginRight:5,
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        paddingTop:40,
+        left:120
+        },
+    
     
     mainText: {
     fontSize: 18,
@@ -121,11 +160,24 @@ const styles = StyleSheet.create({
       display:'flex',
       width:250,
       height:250
-    
      },
-     
+     cardView3: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      top:10,
+      alignItems:'flex',
+      display:'flex',
+      paddingTop:10,
+      width:250,
+      height:50,
+      backgroundColor:'#fff',
+      borderRadius:0,
+      alignItems:'baseline',
       
-
+      },
+    
+    
+    
   } 
   )
 
