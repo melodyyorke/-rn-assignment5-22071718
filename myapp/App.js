@@ -30,7 +30,6 @@ export default function HomeScreen(){
             <Text style={{fontWeight:200}}> Welcome back, </Text>
             <Text style={styles.mainText}> Eric Atsu</Text>
           </View>
-
           <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
             <Image source={search}/>
             <Image style={styles.search}></Image>
@@ -56,8 +55,20 @@ export default function HomeScreen(){
               <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={topUp} style={styles.topUpImage}></Image>
                </View>
-        
-             </View>
+               </View>
+               
+               <View>
+                 {/*send,recieve,loan,topUp*/}
+                 <View>
+               <Text style={{left:20,top:60}}> Send </Text>
+               <Text style={{left:100,top:40}}>Receive</Text>
+               <Text style={{left:205,top:22}}>Loan</Text>
+               <Text style={{left:282,top:5}}>TopUp</Text>
+                </View>
+    
+
+
+                </View>
             <View style={{margin:5}}>
             <Text style={{fontWeight:600,top:70}}>Transaction</Text>
             <Text style={{color:'blue',left:250,top:50}}>Sell All</Text>
@@ -80,6 +91,8 @@ export default function HomeScreen(){
                 </View>
             </View>
 
+
+          
             <View style= {styles.cardView3}>
               {/* home,myCard,statictics,settings*/}
               <View>
@@ -152,6 +165,8 @@ const styles = StyleSheet.create({
       display:'flex',
   
      },
+
+
      cardView2: {
       flexDirection: 'column',
       justifyContent: 'space-around',
@@ -173,8 +188,8 @@ const styles = StyleSheet.create({
       backgroundColor:'#fff',
       borderRadius:0,
       alignItems:'baseline',
-      
-      },
+      }
+
     
     
     
