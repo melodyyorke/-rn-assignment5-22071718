@@ -18,7 +18,7 @@ import settings from './assets/settings.png';
 
 export default function HomeScreen(){
     return (
-      <ScrollView style={styles. container}>
+      <View style={styles. container}>
         <View style={styles.header}>
 
            {/* profile,View Text,search */} 
@@ -36,16 +36,16 @@ export default function HomeScreen(){
              </View>
             </View>
             {/* card Image View*/}
-            <Image source={card} style={{top:15}}></Image>
+            <Image source={card} style={{top:5,marginLeft:5,marginRight:15}}></Image>
 
             <View style={styles.cardView}>
               {/* send,recieve,loan,topUp,View Text */}
-              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center',right:16}}>
                 <Image source={send} style={styles.sendImage}></Image> 
                </View>
                 
                
-              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center',right:10}}>
                 <Image source={recieve} style={styles.recieveImage}></Image>
               </View>
               <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
@@ -58,28 +58,40 @@ export default function HomeScreen(){
                </View>
                
                <View>
-                 {/*send,recieve,loan,topUp*/}
-                 <View>
-               <Text style={{left:20,top:60}}> Send </Text>
-               <Text style={{left:100,top:40}}>Receive</Text>
-               <Text style={{left:205,top:22}}>Loan</Text>
-               <Text style={{left:282,top:5}}>TopUp</Text>
+                  <Text style={{top:30,margin:5}}>
+                    <View>
+               <Text style={{left:5}}>Sent</Text>
+               </View>
+               <View>
+               <Text style={{left:60}}>Receive</Text>
+               </View>
+               <View>
+               <Text style={{left:120}}>Loan</Text>
+               </View>
+               <View>
+               <Text style={{left:165}}>TopUp</Text>
+               </View>
+               </Text>
                 </View>
-    
 
-
+                <View>
+                  <Text style={{top:60,marginRight:5,marginLeft:15}}>
+                    <Text>Transaction</Text>
+                    <View>
+                    <Text style={{color:'blue',left:200}}>Sell All</Text>
+                    </View>
+                   
+                  </Text>
                 </View>
-            <View style={{margin:5}}>
-            <Text style={{fontWeight:600,top:70}}>Transaction</Text>
-            <Text style={{color:'blue',left:250,top:50}}>Sell All</Text>
-            </View>
+              
 
             <View style={styles.cardView2}>
               {/* apple,spotify,moneyTransfer,grocery*/}
-              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}
-              >
+              <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={apple} style={styles.appleImage}></Image>
+      
               </View>
+            
               <View style={{borderRadius:20,backgroundColor:'lightgrey',width:40,height:40,alignItems:'center',justifyContent:'center'}}>
                 <Image source={spotify} style={styles.spotifyImage}></Image>
               </View>
@@ -90,6 +102,7 @@ export default function HomeScreen(){
                 <Image source={grocery} style={styles.groceryImage}></Image>
                 </View>
             </View>
+  
 
 
           
@@ -115,7 +128,7 @@ export default function HomeScreen(){
                 </View>
                </View>
 
- </ScrollView>
+ </View>
 
         
     );
@@ -126,9 +139,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
    paddingTop:20,
-   paddingLeft:10,
-    marginLeft:5,
-    marginRight:5
+   paddingLeft:10
     },
     header: {
       flexDirection: 'row',
@@ -160,9 +171,11 @@ const styles = StyleSheet.create({
     cardView: {
       flexDirection: 'row',
       justifyContent: 'space-around',
-      top:45,
-      alignItems:'flex',
+      top:25,
       display:'flex',
+      marginRight:15,
+      marginLeft:5
+    
   
      },
 
@@ -170,11 +183,13 @@ const styles = StyleSheet.create({
      cardView2: {
       flexDirection: 'column',
       justifyContent: 'space-around',
-      top:40,
+      top:60,
       alignItems:'flex',
       display:'flex',
       width:250,
-      height:250
+      height:250,
+      marginRight:5,
+      marginLeft:15
      },
      cardView3: {
       flexDirection: 'row',
@@ -188,6 +203,8 @@ const styles = StyleSheet.create({
       backgroundColor:'#fff',
       borderRadius:0,
       alignItems:'baseline',
+      marginRight:5,
+      marginLeft:15
       }
 
     
