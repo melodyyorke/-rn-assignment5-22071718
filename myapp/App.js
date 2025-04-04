@@ -134,7 +134,7 @@ export default function HomeScreen(){
                         </View>
                         <View>
                           <Image source={settings} style={styles.settingsImage}></Image>
-                          <Text style={{right:10,top:15,color:'blue'}}>Settings</Text>
+                          <Text style={{right:15,top:15,color:'blue'}}>Settings</Text>
                           
                           </View>
                         
